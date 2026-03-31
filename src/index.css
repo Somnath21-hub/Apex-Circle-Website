@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Space Grotesk", sans-serif;
-  --font-brutal: "Anton", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-brutal: 'Anton', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
 
   --color-background: #050505;
   --color-surface: #0a0a0a;
-  --color-primary: #00FF00; /* Neon Green */
-  --color-secondary: #FF00FF; /* Neon Magenta */
-  --color-tertiary: #00FFFF; /* Neon Cyan */
-  --color-accent: #FF6B00; /* Bright Orange */
+  --color-primary: #00ff00; /* Neon Green */
+  --color-secondary: #ff00ff; /* Neon Magenta */
+  --color-tertiary: #00ffff; /* Neon Cyan */
+  --color-accent: #ff6b00; /* Bright Orange */
 
   --animate-marquee: marquee 30s linear infinite;
   --animate-marquee-reverse: marquee-reverse 30s linear infinite;
@@ -21,30 +21,51 @@
   --animate-glitch-line-delayed: glitch-line 2s linear infinite 1s;
 
   @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 
   @keyframes marquee-reverse {
-    0% { transform: translateX(-50%); }
-    100% { transform: translateX(0); }
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 
   @keyframes glitch-line {
-    0% { top: 0; opacity: 0; }
-    5% { opacity: 1; }
-    100% { top: 100%; opacity: 0; }
+    0% {
+      top: 0;
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
   }
 }
 
 @layer base {
   body {
     @apply bg-background text-white antialiased selection:bg-primary selection:text-black;
-    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+    font-feature-settings: 'ss01', 'ss02', 'cv01', 'cv02';
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display tracking-tighter;
   }
 }
@@ -92,7 +113,8 @@
 }
 
 /* Lenis Smooth Scroll */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 

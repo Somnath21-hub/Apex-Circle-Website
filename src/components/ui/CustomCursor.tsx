@@ -24,13 +24,13 @@ export default function CustomCursor() {
 
     const handleHover = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      const isClickable = 
-        target.tagName === 'BUTTON' || 
-        target.tagName === 'A' || 
-        target.closest('button') || 
+      const isClickable =
+        target.tagName === 'BUTTON' ||
+        target.tagName === 'A' ||
+        target.closest('button') ||
         target.closest('a') ||
         target.classList.contains('cursor-pointer');
-      
+
       setIsHovering(!!isClickable);
     };
 

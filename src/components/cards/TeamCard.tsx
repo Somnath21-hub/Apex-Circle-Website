@@ -1,6 +1,6 @@
-import { motion } from "motion/react";
-import { Twitter, Github, Linkedin, Mail } from "lucide-react";
-import { TeamMember } from "@/types";
+import { motion } from 'motion/react';
+import { Twitter, Github, Linkedin, Mail } from 'lucide-react';
+import { TeamMember } from '@/types';
 
 interface TeamCardProps {
   key?: string | number;
@@ -19,16 +19,25 @@ export default function TeamCard({ member }: TeamCardProps) {
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        
+
         <div className="absolute bottom-6 left-6 right-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
           <div className="flex gap-4">
-            <a href={member.socials.twitter} className="w-8 h-8 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-tertiary hover:text-black transition-colors">
+            <a
+              href={member.socials.twitter}
+              className="w-8 h-8 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-tertiary hover:text-black transition-colors"
+            >
               <Twitter size={14} />
             </a>
-            <a href={member.socials.github} className="w-8 h-8 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-tertiary hover:text-black transition-colors">
+            <a
+              href={member.socials.github}
+              className="w-8 h-8 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-tertiary hover:text-black transition-colors"
+            >
               <Github size={14} />
             </a>
-            <a href={member.socials.linkedin} className="w-8 h-8 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-tertiary hover:text-black transition-colors">
+            <a
+              href={member.socials.linkedin}
+              className="w-8 h-8 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-tertiary hover:text-black transition-colors"
+            >
               <Linkedin size={14} />
             </a>
           </div>

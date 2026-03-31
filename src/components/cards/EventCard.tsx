@@ -1,7 +1,7 @@
-import { motion } from "motion/react";
-import { Calendar, MapPin, Clock, ArrowUpRight } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Event } from "@/types";
+import { motion } from 'motion/react';
+import { Calendar, MapPin, Clock, ArrowUpRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { Event } from '@/types';
 
 interface EventCardProps {
   key?: string | number;
@@ -29,7 +29,7 @@ export default function EventCard({ event }: EventCardProps) {
           {event.type}
         </div>
       </div>
-      
+
       <div className="p-8">
         <div className="flex items-center gap-4 text-slate-500 text-[10px] font-black uppercase tracking-widest mb-4">
           <div className="flex items-center gap-1.5">
@@ -41,15 +41,15 @@ export default function EventCard({ event }: EventCardProps) {
             {event.location}
           </div>
         </div>
-        
+
         <h3 className="text-2xl font-brutal tracking-tight mb-4 group-hover:text-primary transition-colors">
           {event.title}
         </h3>
-        
+
         <p className="text-slate-400 text-sm leading-relaxed mb-8 line-clamp-2">
           {event.description}
         </p>
-        
+
         <button className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white group-hover:text-primary transition-colors">
           Register Protocol <ArrowUpRight size={14} />
         </button>

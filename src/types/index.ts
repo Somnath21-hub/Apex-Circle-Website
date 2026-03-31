@@ -36,7 +36,6 @@ export interface Project {
   contributors: Contributor[];
 }
 
-
 export interface TeamMember {
   id: string;
   name: string;

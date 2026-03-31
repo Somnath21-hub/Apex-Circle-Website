@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { Mail, MessageSquare, Send, Twitter, Github, Linkedin, Globe } from "lucide-react";
+import React, { useState } from 'react';
+import { Mail, MessageSquare, Send, Twitter, Github, Linkedin, Globe } from 'lucide-react';
 
 export default function Contact() {
   const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formState);
-    alert("Message sent successfully! (This is a frontend-only demo)");
-    setFormState({ name: "", email: "", subject: "", message: "" });
+    console.log('Form submitted:', formState);
+    alert('Message sent successfully! (This is a frontend-only demo)');
+    setFormState({ name: '', email: '', subject: '', message: '' });
   };
 
   return (
@@ -27,7 +27,8 @@ export default function Contact() {
             Get in <br /> <span className="text-slate-500">Touch</span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-400 max-w-3xl leading-relaxed">
-            Have a question, a proposal, or just want to say hello? We're always looking for new collaborators and visionaries.
+            Have a question, a proposal, or just want to say hello? We're always looking for new
+            collaborators and visionaries.
           </p>
         </header>
 
@@ -39,8 +40,12 @@ export default function Contact() {
                   <Mail className="text-primary" size={24} md:size={32} />
                 </div>
                 <div>
-                  <h4 className="text-primary font-mono text-[10px] uppercase tracking-widest mb-1 md:mb-2">Email_Sync</h4>
-                  <p className="text-xl md:text-2xl font-brutal uppercase tracking-tight">hello@apexcircle.io</p>
+                  <h4 className="text-primary font-mono text-[10px] uppercase tracking-widest mb-1 md:mb-2">
+                    Email_Sync
+                  </h4>
+                  <p className="text-xl md:text-2xl font-brutal uppercase tracking-tight">
+                    hello@apexcircle.io
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-6 md:gap-8 group">
@@ -48,8 +53,12 @@ export default function Contact() {
                   <MessageSquare className="text-secondary" size={24} md:size={32} />
                 </div>
                 <div>
-                  <h4 className="text-secondary font-mono text-[10px] uppercase tracking-widest mb-1 md:mb-2">Discord_Node</h4>
-                  <p className="text-xl md:text-2xl font-brutal uppercase tracking-tight">discord.gg/apexcircle</p>
+                  <h4 className="text-secondary font-mono text-[10px] uppercase tracking-widest mb-1 md:mb-2">
+                    Discord_Node
+                  </h4>
+                  <p className="text-xl md:text-2xl font-brutal uppercase tracking-tight">
+                    discord.gg/apexcircle
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-6 md:gap-8 group">
@@ -57,8 +66,12 @@ export default function Contact() {
                   <Globe className="text-tertiary" size={24} md:size={32} />
                 </div>
                 <div>
-                  <h4 className="text-tertiary font-mono text-[10px] uppercase tracking-widest mb-1 md:mb-2">Global_HQ</h4>
-                  <p className="text-xl md:text-2xl font-brutal uppercase tracking-tight">San Francisco, CA</p>
+                  <h4 className="text-tertiary font-mono text-[10px] uppercase tracking-widest mb-1 md:mb-2">
+                    Global_HQ
+                  </h4>
+                  <p className="text-xl md:text-2xl font-brutal uppercase tracking-tight">
+                    San Francisco, CA
+                  </p>
                 </div>
               </div>
             </div>
@@ -80,7 +93,9 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-8 md:space-y-12">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                 <div className="space-y-4">
-                  <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">Full Name</label>
+                  <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">
+                    Full Name
+                  </label>
                   <input
                     type="text"
                     required
@@ -91,7 +106,9 @@ export default function Contact() {
                   />
                 </div>
                 <div className="space-y-4">
-                  <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">Email Address</label>
+                  <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">
+                    Email Address
+                  </label>
                   <input
                     type="email"
                     required
@@ -103,7 +120,9 @@ export default function Contact() {
                 </div>
               </div>
               <div className="space-y-4">
-                <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">Subject</label>
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">
+                  Subject
+                </label>
                 <input
                   type="text"
                   required
@@ -114,7 +133,9 @@ export default function Contact() {
                 />
               </div>
               <div className="space-y-4">
-                <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">Message</label>
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">
+                  Message
+                </label>
                 <textarea
                   required
                   rows={4}
@@ -129,7 +150,10 @@ export default function Contact() {
                 className="w-full bg-primary text-black font-black px-10 py-6 uppercase tracking-widest text-sm hover:scale-105 transition-transform flex items-center justify-center gap-4 group"
               >
                 Send Message
-                <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                <Send
+                  size={20}
+                  className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                />
               </button>
             </form>
           </div>
@@ -138,18 +162,39 @@ export default function Contact() {
         {/* FAQ Section */}
         <section className="mt-24 md:mt-48 mb-24 md:mb-48">
           <div className="text-center mb-16 md:mb-24">
-            <span className="text-primary font-mono text-sm mb-4 block tracking-widest uppercase">// Common_Queries</span>
-            <h2 className="text-3xl md:text-6xl font-brutal tracking-tighter uppercase">Frequently Asked <span className="text-slate-500">Questions</span></h2>
+            <span className="text-primary font-mono text-sm mb-4 block tracking-widest uppercase">
+              // Common_Queries
+            </span>
+            <h2 className="text-3xl md:text-6xl font-brutal tracking-tighter uppercase">
+              Frequently Asked <span className="text-slate-500">Questions</span>
+            </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
             {[
-              { q: "How can I join the community?", a: "You can join by clicking the 'Join Community' button and following the application process." },
-              { q: "Are hackathons open to beginners?", a: "Yes, we welcome builders of all skill levels and provide mentors to help you along the way." },
-              { q: "How can I sponsor an event?", a: "Please reach out via the contact form with the subject 'Sponsorship Proposal'." },
-              { q: "What is the membership fee?", a: "Standard membership is free. Premium protocol access is merit-based." },
+              {
+                q: 'How can I join the community?',
+                a: "You can join by clicking the 'Join Community' button and following the application process.",
+              },
+              {
+                q: 'Are hackathons open to beginners?',
+                a: 'Yes, we welcome builders of all skill levels and provide mentors to help you along the way.',
+              },
+              {
+                q: 'How can I sponsor an event?',
+                a: "Please reach out via the contact form with the subject 'Sponsorship Proposal'.",
+              },
+              {
+                q: 'What is the membership fee?',
+                a: 'Standard membership is free. Premium protocol access is merit-based.',
+              },
             ].map((faq, i) => (
-              <div key={i} className="p-8 md:p-12 border border-white/10 bg-white/[0.02] hover:border-primary transition-colors">
-                <h4 className="text-xl md:text-2xl font-brutal uppercase tracking-tighter mb-4 text-primary">{faq.q}</h4>
+              <div
+                key={i}
+                className="p-8 md:p-12 border border-white/10 bg-white/[0.02] hover:border-primary transition-colors"
+              >
+                <h4 className="text-xl md:text-2xl font-brutal uppercase tracking-tighter mb-4 text-primary">
+                  {faq.q}
+                </h4>
                 <p className="text-slate-500 text-sm md:text-base leading-relaxed">{faq.a}</p>
               </div>
             ))}
@@ -158,9 +203,12 @@ export default function Contact() {
 
         {/* Support / Help Center */}
         <section className="mb-24 md:mb-48 py-24 md:py-32 border-y border-white/5 bg-white/[0.01] text-center">
-          <h2 className="text-3xl md:text-6xl font-brutal tracking-tighter uppercase mb-8">Need <span className="text-slate-500">Support?</span></h2>
+          <h2 className="text-3xl md:text-6xl font-brutal tracking-tighter uppercase mb-8">
+            Need <span className="text-slate-500">Support?</span>
+          </h2>
           <p className="text-lg text-slate-500 leading-relaxed mb-12 max-w-2xl mx-auto">
-            Our technical support team is available 24/7 for protocol-related issues and community assistance.
+            Our technical support team is available 24/7 for protocol-related issues and community
+            assistance.
           </p>
           <div className="flex flex-wrap justify-center gap-6 md:gap-8">
             <button className="text-[10px] font-black uppercase tracking-widest text-primary hover:text-white transition-colors border-b border-primary pb-1">

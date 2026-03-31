@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { Github, Twitter, Linkedin, Zap, ArrowUpRight } from "lucide-react";
+import { Link } from 'react-router-dom';
+import { Github, Twitter, Linkedin, Zap, ArrowUpRight } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -11,7 +11,8 @@ export default function Footer() {
               Stay <br /> <span className="text-primary">Connected</span>
             </h2>
             <p className="text-lg md:text-xl text-slate-500 max-w-md mb-8 md:mb-12 font-medium">
-              Join our newsletter to receive the latest updates on protocol deployments and community operations.
+              Join our newsletter to receive the latest updates on protocol deployments and
+              community operations.
             </p>
             <form className="flex flex-col sm:flex-row gap-4 max-w-md">
               <input
@@ -31,13 +32,27 @@ export default function Footer() {
                 // Navigation
               </span>
               <ul className="space-y-4">
-                {["Home", "Hackathons", "Events", "Projects", "Team", "Gallery", "Community", "About", "Contact"].map((item) => (
+                {[
+                  'Home',
+                  'Hackathons',
+                  'Events',
+                  'Projects',
+                  'Team',
+                  'Gallery',
+                  'Community',
+                  'About',
+                  'Contact',
+                ].map((item) => (
                   <li key={item}>
                     <Link
-                      to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                      to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
                       className="text-sm font-black uppercase tracking-widest text-slate-400 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
-                      {item} <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {item}{' '}
+                      <ArrowUpRight
+                        size={12}
+                        className="opacity-0 group-hover:opacity-100 transition-opacity"
+                      />
                     </Link>
                   </li>
                 ))}
@@ -49,16 +64,20 @@ export default function Footer() {
               </span>
               <ul className="space-y-4">
                 {[
-                  { name: "Twitter", icon: Twitter },
-                  { name: "Github", icon: Github },
-                  { name: "Linkedin", icon: Linkedin },
+                  { name: 'Twitter', icon: Twitter },
+                  { name: 'Github', icon: Github },
+                  { name: 'Linkedin', icon: Linkedin },
                 ].map((item) => (
                   <li key={item.name}>
                     <a
                       href="#"
                       className="text-sm font-black uppercase tracking-widest text-slate-400 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
-                      {item.name} <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {item.name}{' '}
+                      <ArrowUpRight
+                        size={12}
+                        className="opacity-0 group-hover:opacity-100 transition-opacity"
+                      />
                     </a>
                   </li>
                 ))}
@@ -70,19 +89,19 @@ export default function Footer() {
               </span>
               <ul className="space-y-4">
                 {[
-                  "Code of Conduct",
-                  "Community Guidelines",
-                  "Privacy Policy",
-                  "Terms & Conditions",
-                  "Sponsorship Deck",
-                  "Media Kit",
-                  "Blog",
-                  "Careers",
-                  "Resources"
+                  'Code of Conduct',
+                  'Community Guidelines',
+                  'Privacy Policy',
+                  'Terms & Conditions',
+                  'Sponsorship Deck',
+                  'Media Kit',
+                  'Blog',
+                  'Careers',
+                  'Resources',
                 ].map((item) => (
                   <li key={item}>
                     <Link
-                      to={`/${item.toLowerCase().replace(/ /g, "-")}`}
+                      to={`/${item.toLowerCase().replace(/ /g, '-')}`}
                       className="text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-primary transition-colors"
                     >
                       {item}

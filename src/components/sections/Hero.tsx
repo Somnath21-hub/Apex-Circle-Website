@@ -1,44 +1,64 @@
-import { useEffect, useRef } from "react";
-import { motion } from "motion/react";
-import { ArrowRight, Sparkles, Code, Users, Zap, Globe, Rocket } from "lucide-react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import { useEffect, useRef } from 'react';
+import { motion } from 'motion/react';
+import { ArrowRight, Sparkles, Code, Users, Zap, Globe, Rocket } from 'lucide-react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
-import Magnetic from "@/components/ui/Magnetic";
+import Magnetic from '@/components/ui/Magnetic';
 
 export default function Hero() {
   const container = useRef<HTMLDivElement>(null);
 
-  useGSAP(() => {
-    const tl = gsap.timeline();
-    
-    tl.to(".reveal-text span", {
-      y: 0,
-      duration: 1,
-      stagger: 0.1,
-      ease: "power4.out"
-    })
-    .from(".hero-sub", {
-      opacity: 0,
-      y: 20,
-      duration: 0.8,
-      ease: "power3.out"
-    }, "-=0.5")
-    .from(".hero-btn", {
-      opacity: 0,
-      scale: 0.9,
-      duration: 0.6,
-      stagger: 0.1,
-      ease: "back.out(1.7)"
-    }, "-=0.4");
-  }, { scope: container });
+  useGSAP(
+    () => {
+      const tl = gsap.timeline();
+
+      tl.to('.reveal-text span', {
+        y: 0,
+        duration: 1,
+        stagger: 0.1,
+        ease: 'power4.out',
+      })
+        .from(
+          '.hero-sub',
+          {
+            opacity: 0,
+            y: 20,
+            duration: 0.8,
+            ease: 'power3.out',
+          },
+          '-=0.5',
+        )
+        .from(
+          '.hero-btn',
+          {
+            opacity: 0,
+            scale: 0.9,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: 'back.out(1.7)',
+          },
+          '-=0.4',
+        );
+    },
+    { scope: container },
+  );
 
   return (
-    <section ref={container} className="relative min-h-screen flex flex-col items-center justify-center pt-32 overflow-hidden bg-background">
+    <section
+      ref={container}
+      className="relative min-h-screen flex flex-col items-center justify-center pt-32 overflow-hidden bg-background"
+    >
       {/* Background Grid */}
-      <div className="absolute inset-0 z-0 opacity-20" 
-           style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
-      
+      <div
+        className="absolute inset-0 z-0 opacity-20"
+        style={{
+          backgroundImage:
+            'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0)',
+          backgroundSize: '40px 40px',
+        }}
+      />
+
       {/* Glow Orbs */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[120px] animate-pulse delay-1000" />
@@ -52,14 +72,20 @@ export default function Hero() {
         </div>
 
         <h1 className="text-5xl sm:text-7xl md:text-[10rem] lg:text-[12rem] font-brutal leading-[0.85] mb-8 md:mb-12 uppercase tracking-tighter">
-          <div className="reveal-text"><span>BUILD</span></div>
-          <div className="reveal-text"><span className="text-primary">BEYOND</span></div>
-          <div className="reveal-text"><span>LIMITS</span></div>
+          <div className="reveal-text">
+            <span>BUILD</span>
+          </div>
+          <div className="reveal-text">
+            <span className="text-primary">BEYOND</span>
+          </div>
+          <div className="reveal-text">
+            <span>LIMITS</span>
+          </div>
         </h1>
 
         <p className="hero-sub text-base sm:text-lg md:text-2xl text-slate-400 max-w-3xl mx-auto mb-10 md:mb-16 leading-tight font-display font-light px-4">
-          Architecting the celestial limit of human potential through code, 
-          collaboration, and radical transparency. Join the elite circle.
+          Architecting the celestial limit of human potential through code, collaboration, and
+          radical transparency. Join the elite circle.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-32">
@@ -84,12 +110,24 @@ export default function Hero() {
         <div className="marquee-content">
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-24 items-center">
-              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">MICROSOFT</span>
-              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">GOOGLE</span>
-              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">AWS</span>
-              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">VERCEL</span>
-              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">GITHUB</span>
-              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">OPENAI</span>
+              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">
+                MICROSOFT
+              </span>
+              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">
+                GOOGLE
+              </span>
+              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">
+                AWS
+              </span>
+              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">
+                VERCEL
+              </span>
+              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">
+                GITHUB
+              </span>
+              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">
+                OPENAI
+              </span>
             </div>
           ))}
         </div>

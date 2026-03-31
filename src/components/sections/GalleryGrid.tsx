@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import { Maximize2, X } from "lucide-react";
-import { GalleryItem } from "@/types";
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Maximize2, X } from 'lucide-react';
+import { GalleryItem } from '@/types';
 
 interface GalleryGridProps {
   items: GalleryItem[];
