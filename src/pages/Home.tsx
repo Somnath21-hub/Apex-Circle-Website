@@ -53,23 +53,13 @@ export default function Home() {
     <div ref={containerRef} className="overflow-hidden">
       <Hero />
 
-      {/* Trusted By Section */}
-      <section className="py-24 px-6 border-b border-white/5 bg-black">
-        <div className="max-w-7xl mx-auto">
-          <span className="text-[10px] font-black uppercase tracking-widest text-slate-700 mb-12 block text-center">// Protocol_Partners</span>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
-            {[...Array(6)].map((_, i) => (
-              <div key={i} className="h-12 bg-white/10 rounded flex items-center justify-center font-brutal text-xl">PARTNER_{i+1}</div>
-            ))}
-          </div>
-        </div>
-      </section>
+    
 
       {/* About & Mission Section */}
       <section className="py-24 md:py-48 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
           <div>
-            <span className="text-primary font-mono text-sm mb-6 md:mb-8 block tracking-widest uppercase">// The_Core_Protocol</span>
+            <span className="text-primary font-mono text-sm mb-6 md:mb-8 block tracking-widest uppercase">// About</span>
             <h2 className="text-5xl md:text-8xl font-brutal tracking-tighter leading-none uppercase mb-8 md:mb-12">
               Apex <br /> <span className="text-slate-500">Circle</span>
             </h2>
@@ -103,7 +93,7 @@ export default function Home() {
       <section className="py-24 md:py-48 px-6 bg-white/[0.02] border-y border-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="section-header mb-16 md:mb-32">
-            <span className="text-primary font-mono text-sm mb-4 block tracking-widest uppercase">// Operations_Overview</span>
+            <span className="text-primary font-mono text-sm mb-4 block tracking-widest uppercase">// WHAT_WE_DO</span>
             <h2 className="text-5xl md:text-9xl font-brutal tracking-tighter leading-[0.8] uppercase">
               What We <span className="text-slate-500">Do</span>
             </h2>
@@ -174,7 +164,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="section-header mb-16 md:mb-32">
             <span className="text-primary font-mono text-sm mb-4 block tracking-widest uppercase">
-              // Protocol_Evolution
+              // Apex-Circle_Evolution
             </span>
             <h2 className="text-5xl md:text-9xl font-brutal tracking-tighter leading-[0.8] uppercase">
               The <span className="text-slate-500">Roadmap</span>
@@ -240,31 +230,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Projects */}
-      <section className="py-32 px-6 bg-white/[0.02] border-y border-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="section-header flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
-            <div>
-              <span className="text-primary font-mono text-sm mb-4 block tracking-widest uppercase">
-                // Built_With_Apex
-              </span>
-              <h2 className="text-6xl md:text-8xl font-brutal tracking-tighter leading-[0.9]">
-                CORE <br /> <span className="text-slate-500">SYSTEMS</span>
-              </h2>
-            </div>
-            <Link to="/projects" className="group flex items-center gap-2 text-sm font-black uppercase tracking-widest">
-              Explore Projects <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </Link>
-          </div>
+    {/* Featured Projects */}
+<section className="py-32 px-6 bg-white/[0.02] border-y border-white/5">
+  <div className="max-w-7xl mx-auto">
+    
+    {/* HEADER */}
+    <div className="section-header flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
+      <div>
+        <span className="text-primary font-mono text-sm mb-4 block tracking-widest uppercase">
+          // Built_With_Apex
+        </span>
+        <h2 className="text-6xl md:text-8xl font-brutal tracking-tighter leading-[0.9]">
+          CORE <br /> <span className="text-slate-500">SYSTEMS</span>
+        </h2>
+      </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {projectsData.slice(0, 2).map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <Link
+        to="/projects"
+        className="group flex items-center gap-2 text-sm font-black uppercase tracking-widest"
+      >
+        Explore Projects
+        <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+      </Link>
+    </div>
 
+    {/* PROJECTS LIST (VERTICAL) */}
+    <div className="flex flex-col gap-16">
+      {projectsData
+        .filter((p) => p.featured) // ✅ only featured
+        .slice(0, 3) // ✅ show 3
+        .map((project, index) => (
+          <ProjectCard
+           
+            project={project}
+            index={index}
+          />
+        ))}
+    </div>
+
+  </div>
+</section>
       {/* Team Section */}
       <section className="py-32 px-6">
         <div className="max-w-7xl mx-auto">

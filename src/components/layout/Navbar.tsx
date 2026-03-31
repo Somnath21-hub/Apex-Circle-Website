@@ -6,13 +6,21 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { name: "Home", path: "/" },
-  { name: "Hackathons", path: "/hackathons" },
-  { name: "Events", path: "/events" },
-  { name: "Projects", path: "/projects" },
-  { name: "Team", path: "/team" },
-  { name: "Gallery", path: "/gallery" },
-  { name: "Community", path: "/community" },
+
+  // 👇 Discovery & Trust
   { name: "About", path: "/about" },
+  { name: "Community", path: "/community" },
+
+  // 👇 Engagement
+  { name: "Events", path: "/events" },
+  { name: "Hackathons", path: "/hackathons" },
+
+  // 👇 Proof / Work
+  { name: "Projects", path: "/projects" },
+  { name: "Gallery", path: "/gallery" },
+
+  // 👇 People (last)
+  { name: "Team", path: "/team" },
 ];
 
 export default function Navbar() {

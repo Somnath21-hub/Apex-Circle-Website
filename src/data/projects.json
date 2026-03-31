@@ -1,62 +1,147 @@
 [
   {
     "id": "1",
-    "title": "Project: AEGIS",
+    "title": "AEGIS - AI Threat Detection System",
     "team": "Nexus AI",
     "category": "AI",
     "hackathon": "Security Challenge 2024",
-    "description": "A decentralized inference engine for real-time threat detection and mitigation.",
+    "description": "A real-time AI-powered threat detection system using anomaly detection and decentralized inference to identify cyber attacks instantly.",
     "demoUrl": "#",
     "githubUrl": "#",
     "image": "https://picsum.photos/seed/aegis/800/600",
-    "featured": true
+    "featured": true,
+    "techStack": ["TensorFlow", "Node.js", "Socket.IO", "MongoDB", "Redis"],
+    "features": [
+      "Real-time anomaly detection using AI models",
+      "Decentralized inference engine",
+      "Live threat monitoring dashboard",
+      "Auto alert & mitigation system"
+    ],
+    "contributors": [
+      {
+        "name": "Abhishek Gupta",
+        "avatar": "https://github.com/abhishek.png"
+      },
+      {
+        "name": "Rahul Kumar",
+        "avatar": "https://github.com/rahul.png"
+      }
+    ]
   },
   {
     "id": "2",
-    "title": "Project: FLUID",
+    "title": "FLUID - Motion UI Framework",
     "team": "Vertex Protocol",
     "category": "Web",
     "hackathon": "UI Innovation Hub",
-    "description": "An iridescent UI framework built for immersive, motion-heavy web experiences.",
+    "description": "A high-performance UI framework built for immersive, animation-heavy web applications with smooth transitions and GPU acceleration.",
     "demoUrl": "#",
     "githubUrl": "#",
     "image": "https://picsum.photos/seed/fluid/800/600",
-    "featured": true
+    "featured": true,
+    "techStack": ["React", "Framer Motion", "Tailwind CSS", "TypeScript"],
+    "features": [
+      "Smooth GPU-accelerated animations",
+      "Reusable UI motion components",
+      "Dynamic theme system",
+      "Highly optimized rendering pipeline"
+    ],
+    "contributors": [
+      {
+        "name": "Aman Singh",
+        "avatar": "https://github.com/aman.png"
+      },
+      {
+        "name": "Priya Sharma",
+        "avatar": "https://github.com/priya.png"
+      }
+    ]
   },
   {
     "id": "3",
-    "title": "Project: KERNEL",
+    "title": "KERNEL - WASM Runtime Engine",
     "team": "Compute Core",
     "category": "Web",
     "hackathon": "High-Perf Challenge",
-    "description": "A high-performance WASM-based runtime for running complex simulations in the browser.",
+    "description": "A WebAssembly-based runtime for executing high-performance simulations directly in the browser with near-native speed.",
     "demoUrl": "#",
     "githubUrl": "#",
     "image": "https://picsum.photos/seed/kernel/800/600",
-    "featured": true
+    "featured": true,
+    "techStack": ["WebAssembly", "Rust", "JavaScript", "Web Workers"],
+    "features": [
+      "Near-native performance in browser",
+      "Parallel computation using Web Workers",
+      "Memory-efficient execution",
+      "Support for complex simulations"
+    ],
+    "contributors": [
+      {
+        "name": "Rohit Verma",
+        "avatar": "https://github.com/rohit.png"
+      },
+      {
+        "name": "Neha Kapoor",
+        "avatar": "https://github.com/neha.png"
+      }
+    ]
   },
   {
     "id": "4",
-    "title": "EcoTrack",
+    "title": "EcoTrack - Carbon Monitoring System",
     "team": "Green Builders",
     "category": "Social Impact",
     "hackathon": "Sustainability Hack 2024",
-    "description": "Real-time carbon footprint tracking for supply chains using blockchain.",
+    "description": "A blockchain-powered platform to track and reduce carbon emissions across supply chains in real time.",
     "demoUrl": "#",
     "githubUrl": "#",
     "image": "https://picsum.photos/seed/eco/800/600",
-    "featured": false
+    "featured": false,
+    "techStack": ["React", "Node.js", "Blockchain", "MongoDB"],
+    "features": [
+      "Real-time carbon tracking",
+      "Supply chain transparency",
+      "Emission analytics dashboard",
+      "Blockchain-based verification"
+    ],
+    "contributors": [
+      {
+        "name": "Karan Mehta",
+        "avatar": "https://github.com/karan.png"
+      },
+      {
+        "name": "Sneha Patel",
+        "avatar": "https://github.com/sneha.png"
+      }
+    ]
   },
   {
     "id": "5",
-    "title": "HealthSync",
+    "title": "HealthSync - Smart Health Integration",
     "team": "BioHackers",
     "category": "Mobile",
     "hackathon": "HealthTech Summit",
-    "description": "A mobile app that syncs wearable data with clinical records securely.",
+    "description": "A secure mobile platform that integrates wearable device data with hospital systems for real-time health monitoring.",
     "demoUrl": "#",
     "githubUrl": "#",
     "image": "https://picsum.photos/seed/health/800/600",
-    "featured": false
+    "featured": false,
+    "techStack": ["React Native", "Node.js", "Firebase", "GraphQL"],
+    "features": [
+      "Wearable device integration",
+      "Real-time health tracking",
+      "Secure medical data sync",
+      "Doctor dashboard access"
+    ],
+    "contributors": [
+      {
+        "name": "Ankit Sharma",
+        "avatar": "https://github.com/ankit.png"
+      },
+      {
+        "name": "Riya Singh",
+        "avatar": "https://github.com/riya.png"
+      }
+    ]
   }
 ]

@@ -10,6 +10,14 @@ export interface Event {
   image: string;
 }
 
+// Contributor Type
+export interface Contributor {
+  name: string;
+  avatar: string; // GitHub profile image
+  githubUrl?: string;
+}
+
+// Project Type
 export interface Project {
   id: string;
   title: string;
@@ -21,7 +29,13 @@ export interface Project {
   githubUrl: string;
   image: string;
   featured: boolean;
+
+  // ✅ NEW FIELDS
+  techStack: string[];
+  features: string[];
+  contributors: Contributor[];
 }
+
 
 export interface TeamMember {
   id: string;
