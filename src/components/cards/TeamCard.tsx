@@ -1,6 +1,6 @@
-import { motion } from "motion/react";
-import { Twitter, Github, Linkedin, Mail, ExternalLink } from "lucide-react";
-import { TeamMember } from "@/types";
+import { motion } from 'motion/react';
+import { Twitter, Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { TeamMember } from '@/types';
 
 interface TeamCardProps {
   key?: string | number;
@@ -10,7 +10,7 @@ interface TeamCardProps {
 
 export default function TeamCard({ member }: TeamCardProps) {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -30,21 +30,36 @@ export default function TeamCard({ member }: TeamCardProps) {
           className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-out"
           referrerPolicy="no-referrer"
         />
-        
+
         {/* Glow Overlay */}
         <div className="absolute inset-0 bg-tertiary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-        
+
         {/* Socials Reveal */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <div className="absolute bottom-6 left-6 right-6 flex flex-col gap-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
             <div className="flex gap-3">
-              <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center hover:bg-tertiary hover:text-black hover:scale-110 transition-all">
+              <a
+                href={member.socials.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center hover:bg-tertiary hover:text-black hover:scale-110 transition-all"
+              >
                 <Twitter size={16} />
               </a>
-              <a href={member.socials.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center hover:bg-tertiary hover:text-black hover:scale-110 transition-all">
+              <a
+                href={member.socials.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center hover:bg-tertiary hover:text-black hover:scale-110 transition-all"
+              >
                 <Github size={16} />
               </a>
-              <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center hover:bg-tertiary hover:text-black hover:scale-110 transition-all">
+              <a
+                href={member.socials.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center hover:bg-tertiary hover:text-black hover:scale-110 transition-all"
+              >
                 <Linkedin size={16} />
               </a>
             </div>
@@ -64,7 +79,7 @@ export default function TeamCard({ member }: TeamCardProps) {
             {member.role}
           </p>
         </div>
-        
+
         {/* Subtle decorative line */}
         <div className="mt-6 w-8 h-[1px] bg-white/10 group-hover:w-full group-hover:bg-tertiary transition-all duration-700" />
       </div>

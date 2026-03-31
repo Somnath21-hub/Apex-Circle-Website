@@ -1,6 +1,8 @@
-// This configuration ensures that Vercel handles client-side routing correctly for a React SPA.
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
