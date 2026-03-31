@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "name": "Alex Rivera",
+    "role": "Founder & Lead Architect",
+    "department": "Leadership",
+    "image": "https://i.pravatar.cc/300?u=alex",
+    "socials": {
+      "twitter": "#",
+      "linkedin": "#",
+      "github": "#"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Sarah Chen",
+    "role": "Core Team / CTO",
+    "department": "Leadership",
+    "image": "https://i.pravatar.cc/300?u=sarah",
+    "socials": {
+      "twitter": "#",
+      "linkedin": "#",
+      "github": "#"
+    }
+  },
+  {
+    "id": "3",
+    "name": "Marcus Thorne",
+    "role": "AI Researcher",
+    "department": "AI/Tech",
+    "image": "https://i.pravatar.cc/300?u=marcus",
+    "socials": {
+      "twitter": "#",
+      "linkedin": "#",
+      "github": "#"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Elena Vogt",
+    "role": "Design Lead",
+    "department": "Design",
+    "image": "https://i.pravatar.cc/300?u=elena",
+    "socials": {
+      "twitter": "#",
+      "linkedin": "#",
+      "github": "#"
+    }
+  },
+  {
+    "id": "5",
+    "name": "Jordan K.",
+    "role": "Web Developer",
+    "department": "Web Dev",
+    "image": "https://i.pravatar.cc/300?u=jordan",
+    "socials": {
+      "twitter": "#",
+      "linkedin": "#",
+      "github": "#"
+    }
+  },
+  {
+    "id": "6",
+    "name": "Maya L.",
+    "role": "Community Manager",
+    "department": "Community",
+    "image": "https://i.pravatar.cc/300?u=maya",
+    "socials": {
+      "twitter": "#",
+      "linkedin": "#",
+      "github": "#"
+    }
+  }
+]

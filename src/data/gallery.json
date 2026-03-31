@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "Global Hackathon 2024",
+    "category": "Hackathons",
+    "image": "https://picsum.photos/seed/gallery1/1200/800"
+  },
+  {
+    "id": "2",
+    "title": "Cloud Workshop NYC",
+    "category": "Workshops",
+    "image": "https://picsum.photos/seed/gallery2/1200/800"
+  },
+  {
+    "id": "3",
+    "title": "Community Meetup SF",
+    "category": "Meetups",
+    "image": "https://picsum.photos/seed/gallery3/1200/800"
+  },
+  {
+    "id": "4",
+    "title": "Annual Awards Gala",
+    "category": "Awards",
+    "image": "https://picsum.photos/seed/gallery4/1200/800"
+  },
+  {
+    "id": "5",
+    "title": "Hackathon Winners",
+    "category": "Hackathons",
+    "image": "https://picsum.photos/seed/gallery5/1200/800"
+  },
+  {
+    "id": "6",
+    "title": "Team Retreat",
+    "category": "Community",
+    "image": "https://picsum.photos/seed/gallery6/1200/800"
+  }
+]

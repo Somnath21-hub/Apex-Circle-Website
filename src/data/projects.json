@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "title": "Project: AEGIS",
+    "team": "Nexus AI",
+    "category": "AI",
+    "hackathon": "Security Challenge 2024",
+    "description": "A decentralized inference engine for real-time threat detection and mitigation.",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "image": "https://picsum.photos/seed/aegis/800/600",
+    "featured": true
+  },
+  {
+    "id": "2",
+    "title": "Project: FLUID",
+    "team": "Vertex Protocol",
+    "category": "Web",
+    "hackathon": "UI Innovation Hub",
+    "description": "An iridescent UI framework built for immersive, motion-heavy web experiences.",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "image": "https://picsum.photos/seed/fluid/800/600",
+    "featured": true
+  },
+  {
+    "id": "3",
+    "title": "Project: KERNEL",
+    "team": "Compute Core",
+    "category": "Web",
+    "hackathon": "High-Perf Challenge",
+    "description": "A high-performance WASM-based runtime for running complex simulations in the browser.",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "image": "https://picsum.photos/seed/kernel/800/600",
+    "featured": true
+  },
+  {
+    "id": "4",
+    "title": "EcoTrack",
+    "team": "Green Builders",
+    "category": "Social Impact",
+    "hackathon": "Sustainability Hack 2024",
+    "description": "Real-time carbon footprint tracking for supply chains using blockchain.",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "image": "https://picsum.photos/seed/eco/800/600",
+    "featured": false
+  },
+  {
+    "id": "5",
+    "title": "HealthSync",
+    "team": "BioHackers",
+    "category": "Mobile",
+    "hackathon": "HealthTech Summit",
+    "description": "A mobile app that syncs wearable data with clinical records securely.",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "image": "https://picsum.photos/seed/health/800/600",
+    "featured": false
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1",
+    "title": "Cloud-Native Architectures Workshop",
+    "date": "2024-10-24",
+    "type": "Workshop",
+    "description": "Master the art of building scalable, cloud-native applications using modern microservices and Kubernetes.",
+    "location": "Virtual Event",
+    "time": "2:00 PM EST",
+    "status": "Upcoming",
+    "image": "https://picsum.photos/seed/cloud/800/600"
+  },
+  {
+    "id": "2",
+    "title": "Apex Global Hackathon 2024",
+    "date": "2024-11-05",
+    "type": "Hackathon",
+    "description": "A 48-hour global build-cycle where developers compete to build the most innovative AI-driven solutions.",
+    "location": "Global Hybrid",
+    "time": "48 Hours",
+    "status": "Upcoming",
+    "image": "https://picsum.photos/seed/hackathon/800/600"
+  },
+  {
+    "id": "3",
+    "title": "Cyber-netic Interfaces Meetup",
+    "date": "2024-11-12",
+    "type": "Meetup",
+    "description": "Exploring the future of human-machine collaboration and VR workspaces with industry experts.",
+    "location": "New York City / Discord",
+    "time": "6:00 PM EST",
+    "status": "Upcoming",
+    "image": "https://picsum.photos/seed/cyber/800/600"
+  },
+  {
+    "id": "4",
+    "title": "Open Source Sprint: React Ecosystem",
+    "date": "2024-09-15",
+    "type": "Workshop",
+    "description": "Contribute to major React libraries and learn from core maintainers in this intensive sprint.",
+    "location": "Remote",
+    "time": "10:00 AM PST",
+    "status": "Past",
+    "image": "https://picsum.photos/seed/react/800/600"
+  },
+  {
+    "id": "5",
+    "title": "AI Ethics & Governance Panel",
+    "date": "2024-08-20",
+    "type": "Meetup",
+    "description": "A deep dive into the ethical implications of AI development and the future of governance.",
+    "location": "San Francisco",
+    "time": "5:30 PM PST",
+    "status": "Past",
+    "image": "https://picsum.photos/seed/ethics/800/600"
+  }
+]
