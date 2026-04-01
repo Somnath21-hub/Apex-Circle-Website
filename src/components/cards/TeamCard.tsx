@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Twitter, Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
 import { TeamMember } from '@/types';
+import { Link } from 'react-router-dom';
 
 interface TeamCardProps {
   key?: string | number;
@@ -10,7 +11,8 @@ interface TeamCardProps {
 
 export default function TeamCard({ member }: TeamCardProps) {
   return (
-    <motion.div
+    <Link to={`/Team/${member.id}`} className="block"> 
+       <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -84,5 +86,7 @@ export default function TeamCard({ member }: TeamCardProps) {
         <div className="mt-6 w-8 h-[1px] bg-white/10 group-hover:w-full group-hover:bg-tertiary transition-all duration-700" />
       </div>
     </motion.div>
+    </Link>
+  
   );
 }

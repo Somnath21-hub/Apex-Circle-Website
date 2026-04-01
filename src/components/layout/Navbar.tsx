@@ -55,10 +55,30 @@ export default function Navbar() {
         )}
       >
         <Link to="/" className="flex items-center gap-2 group shrink-0">
-          <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform">
-            <Zap className="text-black" size={16} fill="currentColor" />
+          <div className="w-10 h-10  rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform">
+            <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="180" height="180" rx="30" />
+              <circle
+                cx="70"
+                cy="90"
+                r="48"
+                stroke="#FFFFFF"
+                stroke-width="14"
+                stroke-linecap="round"
+                stroke-dasharray="238 80"
+                transform="rotate(34 70 90)"
+              />
+              <path
+                d="M50 118L70 62L90 118"
+                stroke="#FFFFFF"
+                stroke-width="14"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path d="M58 102H82" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" />
+            </svg>
           </div>
-          <span className="text-sm font-brutal uppercase tracking-widest hidden sm:inline-block">
+          <span className="text-md font-brutal uppercase tracking-widest hidden sm:inline-block">
             APEX <span className="text-primary">CIRCLE</span>
           </span>
           <span className="text-sm font-brutal uppercase tracking-widest sm:hidden">APEX</span>

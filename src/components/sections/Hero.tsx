@@ -6,6 +6,22 @@ import { useGSAP } from '@gsap/react';
 
 import Magnetic from '@/components/ui/Magnetic';
 
+const brands = [
+  { name: 'Microsoft', logo: 'https://cdn.simpleicons.org/microsoft' },
+  { name: 'Google', logo: 'https://cdn.simpleicons.org/google' },
+  {
+    name: 'Amazon AWS',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_hNqJRu1uNrEfhHH5FCtN3ltoP5MBpjkWg&s',
+  },
+  { name: 'Vercel', logo: 'https://cdn.simpleicons.org/vercel' },
+  { name: 'GitHub', logo: 'https://cdn.simpleicons.org/github' },
+  { name: 'OpenAI', logo: 'https://cdn.simpleicons.org/openai' },
+  { name: 'Meta', logo: 'https://cdn.simpleicons.org/meta' },
+  { name: 'Netflix', logo: 'https://cdn.simpleicons.org/netflix' },
+  { name: 'Tesla', logo: 'https://cdn.simpleicons.org/tesla' },
+  { name: 'Apple', logo: 'https://cdn.simpleicons.org/apple' },
+];
+
 export default function Hero() {
   const container = useRef<HTMLDivElement>(null);
 
@@ -71,7 +87,7 @@ export default function Hero() {
           </span>
         </div>
 
-        <h1 className="text-5xl sm:text-7xl md:text-[10rem] lg:text-[12rem] font-brutal leading-[0.85] mb-8 md:mb-12 uppercase tracking-tighter">
+        <h1 className="text-5xl sm:text-7xl md:text-[10rem] lg:text-[14rem] font-brutal leading-[0.85] mb-8 md:mb-12 uppercase tracking-tighter">
           <div className="reveal-text">
             <span>BUILD</span>
           </div>
@@ -83,7 +99,7 @@ export default function Hero() {
           </div>
         </h1>
 
-        <p className="hero-sub text-base sm:text-lg md:text-2xl text-slate-400 max-w-3xl mx-auto mb-10 md:mb-16 leading-tight font-display font-light px-4">
+        <p className="hero-sub text-base sm:text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 md:mb-16 leading-tight font-display font-light px-4">
           Architecting the celestial limit of human potential through code, collaboration, and
           radical transparency. Join the elite circle.
         </p>
@@ -110,24 +126,14 @@ export default function Hero() {
         <div className="marquee-content">
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-24 items-center">
-              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">
-                MICROSOFT
-              </span>
-              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">
-                GOOGLE
-              </span>
-              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">
-                AWS
-              </span>
-              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">
-                VERCEL
-              </span>
-              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">
-                GITHUB
-              </span>
-              <span className="text-4xl font-brutal opacity-20 hover:opacity-100 transition-opacity cursor-default">
-                OPENAI
-              </span>
+              {brands.map((brand) => (
+                <img
+                  key={brand.name}
+                  src={brand.logo}
+                  alt={brand.name}
+                  className="h-10 opacity-20 hover:opacity-100 transition-opacity duration-300 cursor-pointer grayscale  hover:grayscale-0"
+                />
+              ))}
             </div>
           ))}
         </div>

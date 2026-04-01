@@ -192,7 +192,7 @@ function AppContent() {
               }
             />
             <Route
-              path="/developed/by/abhishek"
+              path="/Team/:memberId"
               element={
                 <PageWrapper>
                   <Developer />

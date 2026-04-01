@@ -13,6 +13,8 @@ import { Users, Zap, Globe, Rocket, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Magnetic from '@/components/ui/Magnetic';
 
+import AboutImage from '@/assets/Image/About.jpg';
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -67,9 +69,9 @@ export default function Home() {
               Apex <br /> <span className="text-slate-500">Circle</span>
             </h2>
             <p className="text-lg md:text-2xl text-slate-400 font-medium leading-relaxed mb-12 md:text-16">
-              Apex Circle is a decentralized collective of architects, engineers, and visionaries
-              building the future of the internet. We deploy next-generation protocols to empower
-              the next billion users.
+              Apex Circle brings together problem-solvers, coders, AI builders, cybersecurity
+              enthusiasts, and deep tech explorers through hackathons, workshops, and hands-on
+              projects.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12">
               <div className="p-8 border border-white/10 bg-white/2">
@@ -94,7 +96,7 @@ export default function Home() {
           </div>
           <div className="relative aspect-square overflow-hidden border border-white/10">
             <img
-              src="https://picsum.photos/seed/about/800/800"
+              src={AboutImage}
               alt="About Apex Circle"
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               referrerPolicy="no-referrer"
@@ -169,10 +171,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="stats-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-24">
             {[
-              { label: 'Active Nodes', value: '2.4k+', icon: Globe, color: 'text-primary' },
+              { label: 'Active Nodes', value: '2k+', icon: Globe, color: 'text-primary' },
               { label: 'Protocols', value: '150+', icon: Zap, color: 'text-secondary' },
-              { label: 'Contributors', value: '850+', icon: Users, color: 'text-tertiary' },
-              { label: 'Deployments', value: '12k+', icon: Rocket, color: 'text-accent' },
+              { label: 'Contributors', value: '200+', icon: Users, color: 'text-tertiary' },
+              { label: 'Deployments', value: '1k+', icon: Rocket, color: 'text-accent' },
             ].map((stat, i) => (
               <div
                 key={i}
@@ -194,22 +196,22 @@ export default function Home() {
       </section>
 
       {/* Manifesto Marquee */}
-      <div className="w-full border-b border-white/5 bg-primary py-4 overflow-hidden">
+      <div className="w-full border-b border-white/5 bg-primary py-4 overflow-hidden  ">
         <div className="flex gap-12 items-center whitespace-nowrap animate-marquee-reverse">
           {[...Array(10)].map((_, i) => (
             <span
               key={i}
               className="text-black text-xs font-black uppercase tracking-[0.5em] flex items-center gap-12"
             >
-              RADICAL TRANSPARENCY <Zap size={12} /> DECENTRALIZED FUTURE <Zap size={12} /> OPEN
-              SOURCE PROTOCOL <Zap size={12} />
+              BUILD IN PUBLIC <Zap size={12} /> LEARN IN COMMUNITY <Zap size={12} /> SHIP FAST{' '}
+              <Zap size={12} /> SCALE TOGETHER <Zap size={12} /> APEX CIRCLE
             </span>
           ))}
         </div>
       </div>
 
       {/* Roadmap Section */}
-      <section className="py-24 md:py-48 px-6 bg-surface relative">
+      <section className="py-14 md:py-48 px-6 bg-surface relative mt-[15vh]">
         <div className="max-w-7xl mx-auto">
           <div className="section-header mb-16 md:mb-32">
             <span className="text-primary font-mono text-sm mb-4 block tracking-widest uppercase">
@@ -226,19 +228,25 @@ export default function Home() {
                 phase: '01',
                 title: 'GENESIS',
                 status: 'COMPLETED',
-                desc: 'Initialization of the core protocol and community formation.',
+                desc: 'We built the base of Apex Circle, created the core system, and formed the first community.',
               },
               {
                 phase: '02',
                 title: 'EXPANSION',
                 status: 'IN PROGRESS',
-                desc: 'Scaling the network to 100+ global nodes and protocol interoperability.',
+                desc: 'We are growing the community, connecting developers worldwide, and building real projects together.',
               },
               {
                 phase: '03',
-                title: 'SINGULARITY',
+                title: 'INFRASTRUCTURE',
                 status: 'UPCOMING',
-                desc: 'Full decentralization and autonomous governance implementation.',
+                desc: 'We will create tools and systems that help developers build and launch projects easily.',
+              },
+              {
+                phase: '04',
+                title: 'SINGULARITY',
+                status: 'FUTURE',
+                desc: 'The system will run in a fully decentralized way where the community makes decisions.',
               },
             ].map((item, i) => (
               <div
@@ -280,10 +288,10 @@ export default function Home() {
           <div className="section-header flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
             <div>
               <span className="text-primary font-mono text-sm mb-4 block tracking-widest uppercase">
-                // Upcoming_Operations
+                // Upcoming_Events
               </span>
               <h2 className="text-6xl md:text-8xl font-brutal tracking-tighter leading-[0.9]">
-                LIVE <br /> <span className="text-slate-500">PROTOCOLS</span>
+                LIVE <br /> <span className="text-slate-500">EVENTS</span>
               </h2>
             </div>
             <Link
