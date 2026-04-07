@@ -72,9 +72,7 @@ export default function Community() {
             The <br /> <span className="text-primary">Community</span>
           </h1>
           <p className="text-lg md:text-2xl text-slate-400 max-w-3xl mx-auto font-medium leading-relaxed">
-            Apex Circle is a decentralized collective of architects, engineers, and visionaries
-            building the future of the internet. Join us in our mission to deploy next-generation
-            protocols.
+            Apex Circle is a decentralized collective of architects, engineers, and visionaries. Our mission is to empower individuals to build real-world solutions and grow through a strong and supportive tech community.
           </p>
         </div>
       </section>

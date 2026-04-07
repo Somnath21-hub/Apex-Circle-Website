@@ -22,7 +22,7 @@ import {
 } from 'lucide-react';
 import Magnetic from '@/components/ui/Magnetic';
 
-const departments = ['All', 'Leadership', 'Web', 'Design', 'Social Media' , 'PR & Outreach'];
+const departments = ['All', 'Leadership', 'Web', 'Design', 'Social Media', 'PR & Outreach'];
 
 export default function Team() {
   const [activeDept, setActiveDept] = useState('All');
@@ -45,11 +45,9 @@ export default function Team() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-tertiary font-mono text-sm mb-6 block tracking-[0.3em] uppercase opacity-80">
-              // The_Architects
-            </span>
+
             <h1 className="text-6xl sm:text-8xl md:text-[12rem] lg:text-[15rem] font-brutal tracking-tighter leading-[0.8] uppercase mb-12">
-              Apex <br /> <span className="text-slate-500">Council</span>
+              OUR <br /> <span className="text-slate-500">CREW</span>
             </h1>
             <p className="text-slate-400 text-lg md:text-2xl max-w-2xl font-medium leading-relaxed uppercase tracking-tight">
               A decentralized collective of visionaries, engineers, and designers building the next
@@ -68,7 +66,7 @@ export default function Team() {
         </header>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-32 md:mb-56">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-32 md:mb-56">
           {filteredTeam.map((member, index) => (
             <TeamCard key={member.id} member={member} index={index} />
           ))}

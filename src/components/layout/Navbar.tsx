@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Hexagon, Zap } from 'lucide-react';
+import { Menu, X, Hexagon, Zap, Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
@@ -15,12 +15,13 @@ const navLinks = [
   { name: 'Events', path: '/events' },
 
   // 👇 Proof / Work
-  { name: 'Projects', path: '/projects' },
   { name: 'Gallery', path: '/gallery' },
 
   // 👇 People (last)
   { name: 'Team', path: '/team' },
 ];
+
+import apexLogo from '@/assets/Image/logo.jpeg';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,40 +49,52 @@ export default function Navbar() {
     >
       <div
         className={cn(
-          'max-w-7xl mx-auto flex items-center justify-between transition-all duration-500 px-4 md:px-6 py-3 rounded-full',
+          'max-w-[98%] mx-auto flex items-center justify-between transition-all duration-700 px-4 sm:px-5 py-4 md:py-5 rounded-2xl relative overflow-hidden',
           scrolled
-            ? 'bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl'
-            : 'bg-transparent',
+            ? 'bg-black/60 backdrop-blur-3xl border border-white/[0.15] shadow-[0_0_30px_rgba(79,142,247,0.2)] before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:bg-gradient-to-r before:from-transparent before:via-primary/70 before:to-transparent'
+            : 'bg-transparent border border-transparent',
         )}
       >
-        <Link to="/" className="flex items-center gap-2 group shrink-0">
-          <div className="w-10 h-10  rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform">
-            <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="180" height="180" rx="30" />
-              <circle
-                cx="70"
-                cy="90"
-                r="48"
-                stroke="#FFFFFF"
-                stroke-width="14"
-                stroke-linecap="round"
-                stroke-dasharray="238 80"
-                transform="rotate(34 70 90)"
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.12),transparent_70%)] opacity-0 transition-opacity duration-700" style={{ opacity: scrolled ? 1 : 0 }} />
+        
+        <Link to="/" className="flex items-center gap-3 group shrink-0 relative z-10">
+          <div className="relative w-16 h-16 rounded-full flex items-center justify-center transition-transform group-hover:scale-105">
+            {/* Thick Glossy Rotating Border - Yellow Highlight */}
+            <div className="absolute inset-0 rounded-full p-[4.5px] animate-[spin-slow_4s_linear_infinite] bg-gradient-to-r from-transparent via-[#FFD700] to-transparent shadow-[0_0_20px_rgba(255,215,0,0.4)]" />
+            <div className="absolute inset-[4.5px] bg-black rounded-full" />
+            
+            <div className="relative w-full h-full rounded-full flex items-center justify-center overflow-hidden border border-white/10 z-10 scale-[0.85]">
+              <img 
+                src={apexLogo} 
+                alt="Apex Circle" 
+                className="w-full h-full object-contain scale-125"
               />
-              <path
-                d="M50 118L70 62L90 118"
-                stroke="#FFFFFF"
-                stroke-width="14"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path d="M58 102H82" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" />
-            </svg>
+              {/* Internal Glossy Shimmer */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+            </div>
           </div>
-          <span className="text-md font-brutal uppercase tracking-widest hidden sm:inline-block">
-            APEX <span className="text-primary">CIRCLE</span>
+          <span 
+            className="text-[20px] md:text-[22px] lg:text-[26px] uppercase tracking-[0.3em] hidden sm:flex text-white font-poppins font-black hover:animate-[gentle-shake_0.2s_ease-in-out_infinite]" 
+          >
+            {"APEX CIRCLE".split("").map((char, i) => (
+              <span 
+                key={i} 
+                className="inline-block transition-all duration-300 hover:text-primary hover:drop-shadow-[0_0_8px_rgba(79,142,247,0.8)]"
+                style={{ 
+                  animation: `writing-char 4s ease-in-out infinite`,
+                  animationDelay: `${i * 0.1}s`,
+                  minWidth: char === " " ? "0.4em" : "auto"
+                }}
+              >
+                {char}
+              </span>
+            ))}
           </span>
-          <span className="text-sm font-brutal uppercase tracking-widest sm:hidden">APEX</span>
+          <span 
+            className="text-[18px] uppercase tracking-widest sm:hidden flex text-white font-poppins font-bold" 
+          >
+            {"APEX".split("").map((char, i) => (char === " " ? "\u00A0" : char))}
+          </span>
         </Link>
 
         {/* Desktop Nav */}
@@ -91,19 +104,28 @@ export default function Navbar() {
               key={link.path}
               to={link.path}
               className={cn(
-                'text-[9px] xl:text-[10px] font-black uppercase tracking-[0.2em] transition-all hover:text-primary whitespace-nowrap',
-                location.pathname === link.path ? 'text-primary' : 'text-slate-400',
+                'relative text-[12px] xl:text-[14px] font-poppins font-black uppercase tracking-[0.2em] transition-all hover:text-white whitespace-nowrap group py-3',
+                location.pathname === link.path 
+                  ? 'text-primary drop-shadow-[0_0_8px_rgba(79,142,247,0.5)]' 
+                  : 'text-slate-300',
               )}
             >
-              {link.name}
+              <span className="relative z-10">{link.name}</span>
+              <span className={cn(
+                "absolute -bottom-0 left-1/2 w-1.5 h-1.5 rounded-full transition-all duration-300 -translate-x-1/2",
+                location.pathname === link.path 
+                  ? "bg-primary shadow-[0_0_12px_rgba(0,255,0,0.9)] opacity-100 bottom-1" 
+                  : "bg-white opacity-0 group-hover:opacity-100 bottom-3 group-hover:bottom-1"
+              )} />
             </Link>
           ))}
-          <div className="w-px h-4 bg-white/10 mx-1 xl:mx-2" />
+          <div className="w-px h-6 bg-white/10 mx-2 xl:mx-4" />
           <Link
             to="/contact"
-            className="text-[9px] xl:text-[10px] font-black uppercase tracking-[0.2em] text-white hover:text-primary transition-colors whitespace-nowrap"
+            className="flex items-center gap-2 text-[14px] xl:text-[16px] font-poppins font-black uppercase tracking-[0.2em] text-white hover:text-primary transition-all whitespace-nowrap group bg-white/5 px-4 py-2 rounded-full border border-white/10 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(79,142,247,0.3)]"
           >
-            Connect
+            <span>Connect</span>
+            <Send size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </Link>
         </div>
 
@@ -111,7 +133,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4 lg:hidden">
           <Link
             to="/contact"
-            className="text-[10px] font-black uppercase tracking-widest text-primary border border-primary/20 px-4 py-2 rounded-full hover:bg-primary hover:text-black transition-all"
+            className="text-[12px] font-poppins font-black uppercase tracking-widest text-primary border border-primary/20 px-4 py-2 rounded-full hover:bg-primary hover:text-black transition-all shadow-[0_0_10px_rgba(79,142,247,0.2)]"
           >
             Join
           </Link>
@@ -144,9 +166,9 @@ export default function Navbar() {
                   <Link
                     to={link.path}
                     className={cn(
-                      'text-4xl sm:text-5xl font-brutal uppercase tracking-tighter transition-colors block py-2',
+                      'text-[38px] sm:text-[50px] font-poppins font-black uppercase tracking-tighter transition-all block py-2',
                       location.pathname === link.path
-                        ? 'text-primary'
+                        ? 'text-primary drop-shadow-[0_0_12px_rgba(79,142,247,0.6)]'
                         : 'text-slate-700 hover:text-white',
                     )}
                   >
@@ -162,7 +184,7 @@ export default function Navbar() {
               >
                 <Link
                   to="/contact"
-                  className="bg-primary text-black font-black uppercase tracking-widest text-sm py-5 rounded-none text-center block hover:scale-[1.02] active:scale-[0.98] transition-transform"
+                  className="bg-primary text-black font-poppins font-black uppercase tracking-widest text-[16px] py-5 rounded-none text-center block hover:scale-[1.02] active:scale-[0.98] transition-transform shadow-[0_0_20px_rgba(79,142,247,0.3)]"
                 >
                   Initialize Connection
                 </Link>
@@ -170,14 +192,14 @@ export default function Navbar() {
             </div>
 
             <div className="mt-auto pt-12 flex justify-between items-center">
-              <div className="text-[10px] font-black uppercase tracking-widest text-slate-500">
+              <div className="text-[12px] font-poppins font-black uppercase tracking-widest text-slate-500">
                 © 2026 APEX CIRCLE
               </div>
               <div className="flex gap-4">
                 {['TW', 'GH', 'LI'].map((s) => (
                   <span
                     key={s}
-                    className="text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-primary cursor-pointer"
+                    className="text-[12px] font-poppins font-black uppercase tracking-widest text-slate-500 hover:text-primary cursor-pointer transition-colors"
                   >
                     {s}
                   </span>

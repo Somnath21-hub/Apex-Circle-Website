@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Home from '@/pages/Home';
 import About from '@/pages/About';
 import Events from '@/pages/Events';
-import Projects from '@/pages/Projects';
 import Team from '@/pages/Team';
 import Gallery from '@/pages/Gallery';
 import Contact from '@/pages/Contact';
@@ -41,8 +40,20 @@ function PageWrapper({ children }: { children: React.ReactNode }) {
   );
 }
 
+import Loader from '@/components/ui/Loader';
+
 function AppContent() {
+  const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
+
+  useEffect(() => {
+    // Lock scroll while loading
+    if (isLoading) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isLoading]);
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -64,146 +75,146 @@ function AppContent() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-white selection:bg-primary selection:text-black">
-      <CustomCursor />
-      <Navbar />
-      <ScrollToTop />
-      <main>
-        <AnimatePresence mode="wait">
-          <Routes location={location}>
-            <Route
-              path="/"
-              element={
-                <PageWrapper>
-                  <Home />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/about"
-              element={
-                <PageWrapper>
-                  <About />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/events"
-              element={
-                <PageWrapper>
-                  <Events />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/projects"
-              element={
-                <PageWrapper>
-                  <Projects />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/team"
-              element={
-                <PageWrapper>
-                  <Team />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/gallery"
-              element={
-                <PageWrapper>
-                  <Gallery />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/community"
-              element={
-                <PageWrapper>
-                  <Community />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/hackathons"
-              element={
-                <PageWrapper>
-                  <Hackathons />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/blog"
-              element={
-                <PageWrapper>
-                  <Blog />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/careers"
-              element={
-                <PageWrapper>
-                  <Careers />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/privacy-policy"
-              element={
-                <PageWrapper>
-                  <Legal />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/terms-&-conditions"
-              element={
-                <PageWrapper>
-                  <Legal />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/code-of-conduct"
-              element={
-                <PageWrapper>
-                  <Legal />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/community-guidelines"
-              element={
-                <PageWrapper>
-                  <Legal />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/contact"
-              element={
-                <PageWrapper>
-                  <Contact />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/Team/:memberId"
-              element={
-                <PageWrapper>
-                  <Developer />
-                </PageWrapper>
-              }
-            />
-          </Routes>
-        </AnimatePresence>
-      </main>
-      <Footer />
-    </div>
+    <>
+      <AnimatePresence mode="wait">
+        {isLoading && (
+          <Loader key="loader" onComplete={() => setIsLoading(false)} />
+        )}
+      </AnimatePresence>
+
+      <div className={`min-h-screen bg-background text-white selection:bg-primary selection:text-black transition-all duration-1000 ${isLoading ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+        <CustomCursor />
+        <Navbar />
+        <ScrollToTop />
+        <main>
+          <AnimatePresence mode="wait">
+            <Routes location={location}>
+              <Route
+                path="/"
+                element={
+                  <PageWrapper>
+                    <Home />
+                  </PageWrapper>
+                }
+              />
+              <Route
+                path="/about"
+                element={
+                  <PageWrapper>
+                    <About />
+                  </PageWrapper>
+                }
+              />
+              <Route
+                path="/events"
+                element={
+                  <PageWrapper>
+                    <Events />
+                  </PageWrapper>
+                }
+              />
+              <Route
+                path="/team"
+                element={
+                  <PageWrapper>
+                    <Team />
+                  </PageWrapper>
+                }
+              />
+              <Route
+                path="/gallery"
+                element={
+                  <PageWrapper>
+                    <Gallery />
+                  </PageWrapper>
+                }
+              />
+              <Route
+                path="/community"
+                element={
+                  <PageWrapper>
+                    <Community />
+                  </PageWrapper>
+                }
+              />
+              <Route
+                path="/hackathons"
+                element={
+                  <PageWrapper>
+                    <Hackathons />
+                  </PageWrapper>
+                }
+              />
+              <Route
+                path="/blog"
+                element={
+                  <PageWrapper>
+                    <Blog />
+                  </PageWrapper>
+                }
+              />
+              <Route
+                path="/careers"
+                element={
+                  <PageWrapper>
+                    <Careers />
+                  </PageWrapper>
+                }
+              />
+              <Route
+                path="/privacy-policy"
+                element={
+                  <PageWrapper>
+                    <Legal />
+                  </PageWrapper>
+                }
+              />
+              <Route
+                path="/terms-&-conditions"
+                element={
+                  <PageWrapper>
+                    <Legal />
+                  </PageWrapper>
+                }
+              />
+              <Route
+                path="/code-of-conduct"
+                element={
+                  <PageWrapper>
+                    <Legal />
+                  </PageWrapper>
+                }
+              />
+              <Route
+                path="/community-guidelines"
+                element={
+                  <PageWrapper>
+                    <Legal />
+                  </PageWrapper>
+                }
+              />
+              <Route
+                path="/contact"
+                element={
+                  <PageWrapper>
+                    <Contact />
+                  </PageWrapper>
+                }
+              />
+              <Route
+                path="/Team/:memberId"
+                element={
+                  <PageWrapper>
+                    <Developer />
+                  </PageWrapper>
+                }
+              />
+            </Routes>
+          </AnimatePresence>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
 

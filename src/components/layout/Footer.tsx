@@ -1,16 +1,18 @@
 import { Link } from 'react-router-dom';
 import { Github, Twitter, Linkedin, Zap, ArrowUpRight } from 'lucide-react';
+import apexLogo from '@/assets/Image/logo.jpeg';
 
 export default function Footer() {
   return (
     <footer className="bg-black border-t border-white/5 pt-24 md:pt-32 pb-12 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 mb-24 md:mb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-32 mb-24 md:mb-32">
           <div>
-            <h2 className="text-5xl sm:text-7xl md:text-9xl font-brutal tracking-tighter leading-[0.8] uppercase mb-8 md:mb-12">
-              Stay <br /> <span className="text-primary">Connected</span>
+            <h2 className="text-5xl sm:text-7xl md:text-8xl font-poppins font-black tracking-tighter leading-[0.8] uppercase mb-8 md:mb-12">
+              <span className="text-white animate-text-glow-white">Stay</span> <br /> 
+              <span className="text-primary animate-text-glow">Connected</span>
             </h2>
-            <p className="text-lg md:text-xl text-slate-500 max-w-md mb-8 md:mb-12 font-medium">
+            <p className="text-lg md:text-xl text-slate-500 max-w-md mb-8 md:mb-12 font-montserrat font-medium">
               Join our newsletter to receive the latest updates on protocol deployments and
               community operations.
             </p>
@@ -28,15 +30,14 @@ export default function Footer() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
             <div>
-              <span className="text-[10px] font-black uppercase tracking-widest text-slate-600 mb-8 block">
-                // Navigation
+              <span className="text-xs font-black uppercase tracking-[0.2em] text-[#facc15] animate-text-glow-gold mb-8 block">
+                Navigation
               </span>
               <ul className="space-y-4">
                 {[
                   'Home',
                   'Hackathons',
                   'Events',
-                  'Projects',
                   'Team',
                   'Gallery',
                   'Community',
@@ -46,11 +47,11 @@ export default function Footer() {
                   <li key={item}>
                     <Link
                       to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                      className="text-sm font-black uppercase tracking-widest text-slate-400 hover:text-primary transition-colors flex items-center gap-2 group"
+                      className="text-base font-montserrat font-bold uppercase tracking-widest text-slate-400 hover:text-primary transition-all flex items-center gap-2 group"
                     >
                       {item}{' '}
                       <ArrowUpRight
-                        size={12}
+                        size={14}
                         className="opacity-0 group-hover:opacity-100 transition-opacity"
                       />
                     </Link>
@@ -59,8 +60,8 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <span className="text-[10px] font-black uppercase tracking-widest text-slate-600 mb-8 block">
-                // Socials
+              <span className="text-xs font-black uppercase tracking-[0.2em] text-[#facc15] animate-text-glow-gold mb-8 block">
+                Socials
               </span>
               <ul className="space-y-4">
                 {[
@@ -71,11 +72,11 @@ export default function Footer() {
                   <li key={item.name}>
                     <a
                       href="#"
-                      className="text-sm font-black uppercase tracking-widest text-slate-400 hover:text-primary transition-colors flex items-center gap-2 group"
+                      className="text-base font-montserrat font-bold uppercase tracking-widest text-slate-400 hover:text-primary transition-all flex items-center gap-2 group"
                     >
                       {item.name}{' '}
                       <ArrowUpRight
-                        size={12}
+                        size={14}
                         className="opacity-0 group-hover:opacity-100 transition-opacity"
                       />
                     </a>
@@ -84,8 +85,8 @@ export default function Footer() {
               </ul>
             </div>
             <div className="col-span-2 md:col-span-1">
-              <span className="text-[10px] font-black uppercase tracking-widest text-slate-600 mb-8 block">
-                // Legal & Resources
+              <span className="text-xs font-black uppercase tracking-[0.2em] text-[#facc15] animate-text-glow-gold mb-8 block">
+                Legal & Resources
               </span>
               <ul className="space-y-4">
                 {[
@@ -102,7 +103,7 @@ export default function Footer() {
                   <li key={item}>
                     <Link
                       to={`/${item.toLowerCase().replace(/ /g, '-')}`}
-                      className="text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-primary transition-colors"
+                      className="text-[12px] font-montserrat font-bold uppercase tracking-widest text-slate-500 hover:text-primary transition-all"
                     >
                       {item}
                     </Link>
@@ -115,8 +116,8 @@ export default function Footer() {
 
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-              <Zap className="text-black" size={12} fill="currentColor" />
+            <div className="w-8 h-8 rounded-full overflow-hidden border border-white/20">
+              <img src={apexLogo} alt="Apex Circle Logo" className="w-full h-full object-contain" />
             </div>
             <span className="text-[10px] font-black uppercase tracking-widest text-slate-500">
               © 2026 APEX CIRCLE

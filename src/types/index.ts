@@ -54,6 +54,7 @@ export interface TeamMember {
   role: string;
   department: string;
   image: string;
+  imagePosition?: string; // e.g. "center top"
   socials: {
     twitter: string;
     github: string;
